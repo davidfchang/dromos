@@ -1,0 +1,52 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "famono": {},
+      "accounts-foursquare": {},
+      "leaflet": {},
+      "iron-router": {
+        "git": "https://github.com/eventedmind/iron-router.git",
+        "branch": "blaze-integration"
+      },
+      "modernizr-meteor": {}
+    },
+    "packages": {
+      "famono": {
+        "git": "https://github.com/raix/Meteor-famono.git",
+        "tag": "v0.2.2",
+        "commit": "33439a1a1ba001772a2d2b26db1825875ba64f90"
+      },
+      "accounts-foursquare": {
+        "git": "https://github.com/pius/meteor-accounts-foursquare.git",
+        "tag": "v1.0.1",
+        "commit": "75db036bb2c4c3ddb0a15715f847e71f6e7b4d1a"
+      },
+      "leaflet": {
+        "git": "https://github.com/bevanhunt/meteor-leaflet.git",
+        "tag": "v0.3.6",
+        "commit": "d9e3bdb824145c1078e52945909bb1cf38724da5"
+      },
+      "iron-router": {
+        "git": "https://github.com/eventedmind/iron-router.git",
+        "branch": "blaze-integration",
+        "commit": "947991731df164e56b53cfdae8ef23802d989142"
+      },
+      "modernizr-meteor": {
+        "git": "https://github.com/ckir/modernizr-meteor.git",
+        "tag": "v2.6.2",
+        "commit": "391ca2a3beff3cd2b0e1099cb2d744b5a2e8a73e"
+      },
+      "foursquare": {
+        "git": "https://github.com/SimonEngelhardt/meteor-foursquare.git",
+        "tag": "v0.0.1",
+        "commit": "e3b97720ba476d9b8fbee002f533fd0e749c90da"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "branch": "master",
+        "commit": "273e3ab7d005d91a1a59c71bd224533b4dae2fbd"
+      }
+    }
+  }
+}

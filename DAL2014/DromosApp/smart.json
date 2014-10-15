@@ -1,0 +1,12 @@
+{
+  "packages": {
+    "famono": {},
+    "accounts-foursquare": {},
+    "leaflet": {},
+    "iron-router": {
+      "git": "https://github.com/eventedmind/iron-router.git",
+      "branch": "blaze-integration"
+    },
+    "modernizr-meteor": {}
+  }
+}

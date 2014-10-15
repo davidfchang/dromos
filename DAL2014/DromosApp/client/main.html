@@ -1,0 +1,320 @@
+<head>
+  <title>Dromos - Navegación por Hitos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="icon" type="image/png" href="/images/isotipo.png">
+
+</head>
+
+<body>
+
+	<!--header-->
+	<div class="header mediumgrey-bg centered">
+		<a href="/">
+		<img src="/images/isotipo.png" style=" width: 50px; margin-top: 10px; position:relative; text-align: centered;"/>
+		</a> 
+	</div>
+
+	{{> loginButtons}}	
+
+	<!--main content-->
+	<div class="container centered" id="main">
+		{{> navigationMenu}}
+	</div>
+
+
+	<!--footer-->
+ 	<div class="dark-grey-bg-footer centered tiny footer" >
+ 		<a href="http://dromos.me"> Dromos 2014</a> - All rights reserved. :: 
+
+ 	<!-- basic router navigation for debugging -->
+ 		<a href="/"> home </a> - 
+		<a href="/navigate"> navigate </a> - 
+		<a href="/explore"> explore </a> - 
+		<a href="/create"> create </a> -
+		<a href="/learn"> learn </a> -
+		<a href="/map"> map </a> 
+		
+
+	</div>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+<template name="hello">
+	{{greeting}}
+</template>
+
+
+<template name="from">
+	{{pickFrom}}
+</template>
+
+<template name="to">
+	{{pickTo}}
+</template>
+
+
+
+<template name="map2">
+		{{content}}
+	    <div id="container" class="container">
+	      <div id="map" class="map"></div>
+	    </div>
+
+</template>
+
+
+<template name="map">
+	
+</template>
+
+
+<template name='blank'></template>
+
+
+<template name='home'>
+		
+	<div id="wrapper-home" style="width=100%; height=100%;">
+		<div id="contenido-home" style="margin:20px; width=100%; height=400px;">
+			<h2>¡Qué tal!</h2>
+			Bienvenido a la versión de demostración de DROMOS ('camino' en Griego), una aplicación de Ecuatorianos para Ecuatorianos. ¡Únete a una comunidad de ciudadanos como tú, que aman su ciudad, y quieren hacerla aún más bacán!<br/>
+			¡Estarás ayudando a más compatriotas y extranjeros a recorrer y conocer todo lo que tu tierra puede ofrecer!
+			<br/>
+			Pronto estaremos agregando más información como: puntos seguros, paradas informales, hitos populares, y más.
+	<!--
+			<input type="button" class="main-options navigate blue-bg-hover" value="Navigate" />
+			<input type="button" class="main-options discover" value="Discover (soon)" />
+			<input type="button" class="main-options learn" value="Learn (soon)" />
+			<input type="button" class="main-options create" value="Create (soon)" />
+		    <input type="button" class="main-options navigate blue-bg-hover" value="About" />
+		    <button>About</button>
+		-->
+		</div>
+		
+		<div id="fondo-home" style="width: 100%;
+			    height: 450px;
+			    background-image: url('/images/gye_sunset.jpg');
+			    background-size: cover;
+			    background-repeat: no-repeat;
+			    background-position: 50% 50%;"
+			    >
+		</div>
+	</div>
+	
+</template>
+
+
+<template name="create">
+
+	{{#if currentUser}}
+		<textarea rows="3" class="input-xxlarge" name="venueName" id="venueName" placeholder="Venue Name:"></textarea>
+		<br/>
+		<textarea rows="3" class="input-xxlarge" name="venueLat" id="venueLat" placeholder="Latitude:"></textarea>
+		<br/>
+		<textarea rows="3" class="input-xxlarge" name="venueLong" id="venueLong" placeholder="Longitude:"></textarea>
+		<br/>
+		<input type="button" class="btn-info add-venue" value="Add Venue"/>
+	{{/if}}
+
+	{{#unless currentUser}}
+		<div id="wrapper-create" style="width=100%; height=100%;">
+			<div id="contenido-create" style="margin:20px; width=100%; height=400px;">
+				<h2>Crea</h2>
+				¿Conoces paradas de buses que no están en ningún mapa? ¡Ingresa a Dromos y construye una ciudad más bacán con nosotros! Sólo tienes que registrarte arriba, y listo.
+				<br/>
+				¡Estamos organizando mingas de datos con ciudadanos rodados, que conozcan los verdaderos paraderos y rutas secretas!
+		<!--
+				<input type="button" class="main-options navigate blue-bg-hover" value="Navigate" />
+				<input type="button" class="main-options discover" value="Discover (soon)" />
+				<input type="button" class="main-options learn" value="Learn (soon)" />
+				<input type="button" class="main-options create" value="Create (soon)" />
+			    <input type="button" class="main-options navigate blue-bg-hover" value="About" />
+			    <button>About</button>
+			-->
+			</div>
+			
+			<div id="fondo-create" style="width: 100%;
+				    height: 450px;
+				    background-image: url('/images/gye_traffic.jpg');
+				    background-size: cover;
+				    background-repeat: no-repeat;
+				    background-position: 50% 50%;"
+				    >
+			</div>
+		</div>
+
+
+
+
+
+	{{/unless}}
+
+</template>
+
+<template name="navigate">
+
+	<div id="wrapper-navigate" style="width=100%; height=100%;width=100%;">
+		<div id="contenido-navigate" style="margin:20px; width=100%;">
+
+			<h2>Navega</h2>
+			<div id="navigate-form" style="margin:20px; width=100%;">
+				<form id="buscar_ruta" action="/map" >
+					<div id="autocomplete_desde" class="autocomplete seven columns" style="width=100%;">
+						<label>Desde:</label>
+						<input type="text" id="desde" width="100%" name="desde" placeholder=" mi lugar de partida" />
+					</div>
+					<div id="autocomplete_hasta" class="autocomplete seven columns" style="width=100%;">
+						<label>Hasta:</label>
+						<input type="text" id="hasta" width="100%" name="hasta" placeholder=" mi lugar de destino" />
+					</div>
+					<div class="two columns">
+						<br />
+						<input type="submit" value="Buscar" class="blue-bg-hover" />
+					</div>
+				</form>
+			</div>
+			DROMOS es diferente a otras opciones de navegación. Te guiamos pensando en hitos en vez de direcciones, para que puedas preguntar cómo llegar sin perderte.  <br/>
+			Pronto estaremos alimentando información de horas pico, seguridad y rutas informales, para crear junto contigo ciudades más amigables e inteligentes.
+
+		</div>
+	</div>
+
+</template>
+
+<template name="explore">
+	<div id="wrapper-explore" style="width=100%; height=100%;">
+		<div id="contenido-explore" style="margin:20px; width=100%; ">
+			<h2>Explora (se viene)</h2>
+			¡En esta sección podrás explorar tu ciudad como nunca antes!<br/>
+			Podrás descubrir hitos cercanos a tu ubicación, y dejarte sorprender con nuevas experiencias.
+			<br/>
+			¡Estamos buscando ciudadanos de verdad, que conozcan los verdaderos huecos!
+	<!--
+			<input type="button" class="main-options navigate blue-bg-hover" value="Navigate" />
+			<input type="button" class="main-options discover" value="Discover (soon)" />
+			<input type="button" class="main-options learn" value="Learn (soon)" />
+			<input type="button" class="main-options create" value="Create (soon)" />
+		    <input type="button" class="main-options navigate blue-bg-hover" value="About" />
+		    <button>About</button>
+		-->
+		</div>
+		
+		<div id="fondo-explore" style="width: 100%;
+			    height: 450px;
+			    background-image: url('/images/gye_bridge.jpg');
+			    background-size: cover;
+			    background-repeat: no-repeat;
+			    background-position: 50% 50%;"
+			    >
+		</div>
+	</div>
+
+</template>
+
+<template name='learn'>
+    	<div id="wrapper-learn" style="width=100%; height=100%;">
+		<div id="contenido-learn" style="margin:20px; width=100%; height=400px;">
+			<h2>Aprende (se viene)</h2>
+			¡En esta sección podrás saber la pepa de los puntos que visitas!<br/>
+			Más allá de simples tips, queremos que realmente conozcas el contexto histórico, turístico y humano de cada hito, y cómo éste hace de Guayaquil una ciudad más especial.
+			<br/>
+			¡Estamos buscando historiadores y guías urbanos de verdad, que conozcan los verdaderos relatos Guayacas!
+	<!--
+			<input type="button" class="main-options navigate blue-bg-hover" value="Navigate" />
+			<input type="button" class="main-options discover" value="Discover (soon)" />
+			<input type="button" class="main-options learn" value="Learn (soon)" />
+			<input type="button" class="main-options create" value="Create (soon)" />
+		    <input type="button" class="main-options navigate blue-bg-hover" value="About" />
+		    <button>About</button>
+		-->
+		</div>
+		
+		<div id="fondo-explore" style="width: 100%;
+			    height: 450px;
+			    background-image: url('/images/gye_statue.jpg');
+			    background-size: cover;
+			    background-repeat: no-repeat;
+			    background-position: 50% 50%;"
+			    >
+		</div>
+	</div>
+<!--
+    <button>Home</button>
+-->
+</template>
+
+
+
+<template name="navigationMenu">
+		<div class="codrops-menu" >
+				<div class="main clearfix">
+					<nav id="menu" class="nav">					
+						<ul>
+							<li>
+								<a href="/">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-isotipo_a"></i>
+									</span>
+									<span>Inicio</span>
+								</a>
+							</li>
+							<li>
+								<a href="/navigate">
+									<span class="icon"> 
+										<i aria-hidden="true" class="icon-road_b"></i>
+									</span>
+									<span>Navega</span>
+								</a>
+							</li>
+							<li>
+								<a href="/explore">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-explore_b"></i>
+									</span>
+									<span>Explora</span>
+								</a>
+							</li>
+							<li>
+								<a href="/create">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-create_b"></i>
+									</span>
+									<span>Crea</span>
+								</a>
+							</li>
+							<li>
+								<a href="/learn">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-discover_b"></i>
+									</span>
+									<span>Aprende</span>
+								</a>
+							</li>
+							<li>
+								<a href="/map">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-direction"></i>
+									</span>
+									<span>Mapa</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+		</div>
+
+
+</template>	

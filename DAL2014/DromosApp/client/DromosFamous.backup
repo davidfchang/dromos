@@ -1,0 +1,403 @@
+
+
+  // --------------------- FAMO.US -----------------------------------------
+
+
+  // Rig some famo.us deps
+  require("famous-polyfills"); // Add polyfills
+  require("famous/core/famous"); // Add the default css file
+
+  Application = null;
+
+
+  // Make sure dom got a body...
+  Meteor.startup(function() {
+
+    // Basic deps
+    var Engine           = require("famous/core/Engine");
+    var Modifier         = require("famous/core/Modifier");
+    var RenderController = require("famous/views/RenderController");
+    var Transform        = require('famous/core/Transform');  
+    var Easing           = require('famous/transitions/Easing');
+    var Timer            = require('famous/utilities/Timer');
+    var Scrollview       = require('famous/views/Scrollview');
+    
+    var Transitionable   = require("famous/transitions/Transitionable");
+    var SnapTransition   = require("famous/transitions/SnapTransition");
+    var SpringTransition = require("famous/transitions/SpringTransition");
+    var StateModifier    = require('famous/modifiers/StateModifier');
+
+    var View             = require("famous/core/View");
+    var Lightbox         = require("famous/views/Lightbox");
+    var Surface          = require("famous/core/Surface"); // This one needs document.body
+
+    var HeaderFooterLayout = require("famous/views/HeaderFooterLayout");
+    var GridLayout       = require("famous/views/GridLayout");
+    
+
+
+    Transitionable.registerMethod('snap', SnapTransition);
+    Transitionable.registerMethod('spring', SpringTransition);
+
+
+
+  //  ----------------------------------- MANEJO DE VIEWS -----------------------------
+
+    function App() {
+      View.apply(this, arguments);
+
+            // create and assign a lightbox to this view
+            this.lightbox = new Lightbox({
+              inOpacity: 0.5,
+              outOpacity: 0,
+              inTransform: Transform.translate(320,0, 0),
+              outTransform: Transform.translate(-320, 0, 1),
+              inTransition: { duration: 400, curve: Easing.outBack },
+              outTransition: { duration: 150, curve: Easing.easeOut }
+              
+            });
+            this.add(this.lightbox);
+
+            this._eventInput.pipe(this.lightbox);
+
+            this._sectionSurfaces = [];
+          }
+
+          App.prototype = Object.create(View.prototype);
+          App.prototype.constructor = App;
+
+          App.prototype.addSection = function (name, template, data) {
+            // create the div for the meteor template
+            var div = document.createElement('div');
+
+
+            UI.insert(data ? UI.renderWithData(template, data) : UI.render(template), div);
+
+            this._sectionSurfaces[name] = new Surface({
+              content: div,
+              size: [ undefined, undefined  ],
+              classes: ["famous-container"]
+            });
+          };
+
+
+          App.prototype.show = function (sectionName) {
+            var surface = this._sectionSurfaces[sectionName];
+            if (surface) {
+              this.lightbox.show(surface);
+                setTimeout(function(){
+                  //console.log('redimensionando el mapa');
+                  leafletMap.invalidateSize(false);
+                }, 500);
+            }
+          };
+
+
+          App.prototype.animateRoute = function(routeName) {
+            var route = _.find(Router.routes, function(r) { return r.name == routeName; });
+            if(!route) {
+              return;
+            }
+
+            var me = this;
+            var controller = route.getController(route.originalPath, route.options);
+            var templateName = Router.convertTemplateName(route.name);
+            route.options.template = "blank";
+            route.options.onBeforeAction = function() { me.show(templateName); }
+            me.addSection(templateName, Template[templateName]);
+          }
+
+          App.prototype.animateAllRoutes = function () {
+            var me = this;
+            _.each(Router.routes, function(route) {
+              var controller = route.getController(route.originalPath, route.options);
+              var templateName = Router.convertTemplateName(route.name);
+              route.options.template = "blank";
+              route.options.onBeforeAction = function() { me.show(templateName); }
+              me.addSection(templateName, Template[templateName]);
+            });
+          }
+
+
+
+
+
+        // create the App from the template
+        Application = new App();
+
+
+    //---------------------------- SECCIONES DE LA APLICACION -----------------------------
+
+
+    Application.addSection('home', Template.home);
+    Application.addSection('navigate', Template.navigate);
+    Application.addSection('explore', Template.explore);
+    Application.addSection('learn', Template.learn, { content: 'The Dromos team rocks!' });
+    Application.addSection('create', Template.create);
+    Application.addSection('leafletmap',Template.leafletmap);
+
+
+
+      //------------------------- MANEJO DE ENGINE DE FAMO.US ----------------------------
+
+      // establecer viewport para que no traslape con header y footer
+
+
+      var mainContext = Engine.createContext();
+
+      var layout = new HeaderFooterLayout({
+        headerSize: 131,
+        footerSize: 20
+      });
+
+      layout.header.add(new Surface({
+        content: "Header",
+        classes: ["dark-grey-bg"],
+        properties: {
+          lineHeight: "131px",
+          textAlign: "center"
+        }
+      }));
+
+
+
+      // CREAR SCROLLVIEW PARA EL CONTENIDO DE LA APLICACIÓN
+
+      var contentScrollView = new Scrollview();
+      var contentScrollViewSurfaces = [];
+
+      contentScrollViewSurfaces.push(Application);
+      contentScrollView.sequenceFrom (contentScrollViewSurfaces);
+      contentScrollView.subscribe(Engine);
+
+      layout.content.add(contentScrollView);
+
+
+      layout.footer.add(new Surface({
+          content: "Footer",
+          classes: ["dark-grey-bg"],
+          properties: {
+              lineHeight: "20px",
+              textAlign: "center"
+          }
+      }));
+
+    
+      mainContext.add(layout);
+
+
+
+
+
+
+
+    //-------------------------- CARGAR DATA AL MAPA DE LEAFLET -------------------
+
+    var Main = (function () {
+        function Main() {
+            this.markers = new Array();
+            this.SERVER = 'http://safe-reaches-3195.herokuapp.com/';
+        }
+
+        Main.prototype.getRoute = function (data) {
+            var _this = this;
+            console.log('pido api '+_this.SERVER);
+            $.getJSON(_this.SERVER+'/routes/' + data.city + '/' + data.start + '/' + data.end + '?callback=?', function (response) {
+                console.log('regresa el api');
+                console.log(response);
+                _this.drawRoute(response.routes[0].stops);
+            });
+        };
+
+        Main.prototype.drawRoute = function (stops) {
+            console.log('dibujo la ruta');
+            this.removeMarkers();
+            for (var i in stops) {
+                this.addMarker(stops[i]);
+            }
+        };
+
+        Main.prototype.addMarker = function (poi) {
+            console.log('aniado marker '+poi.venue)
+            var marker = new L.LatLng(poi.latitude, poi.longitude, true);
+            var plotmark = new L.Marker(marker);
+
+            plotmark.data = poi.venue;
+            plotmark.bindPopup("<h5>" + poi.venue + "</h5>");
+
+            this.map.addLayer(plotmark)
+            this.SERVER = 'http://safe-reaches-3195.herokuapp.com/';;
+            this.markers.push(plotmark);
+        };
+
+        Main.prototype.getTransportInfo = function (city) {
+            var _this = this;
+            $.getJSON(_this.SERVER+'/transports/' + city + '?callback=?', function (response) {
+                _this.transportInfo = response.resultado[0].data;
+                /*var autocompleteDesde = completely(document.getElementById('autocomplete_desde'));
+                autocompleteDesde.options = _this.transportInfo[2];
+
+                var autocompleteHasta = completely(document.getElementById('autocomplete_hasta'));
+                autocompleteHasta.options = _this.transportInfo[2];
+
+                autocompleteDesde.input.focus();*/
+            });
+        };
+
+        Main.prototype.removeMarkers = function () {
+          console.log('borro ruta anterior');
+            for (var i = 0; i < this.markers.length; i++) {
+                this.map.removeLayer(this.markers[i]);
+            }
+            this.markers = [];
+        };
+       
+
+        Main.prototype.init = function (lmap) {
+            var _this = this;
+            var city = 'gye';
+            this.map = lmap;
+            //this.getTransportInfo(city);
+
+            console.log('inicia main');
+
+            _this.getRoute({
+                city: city,
+                start: 'Terminal Río Daule',//$('#autocomplete_desde input').val(),
+                end: 'Terminal Guasmo'//$('#autocomplete_hasta input').val()
+            });
+        };
+        return Main;
+    })();
+
+
+
+
+
+    //--------------------------- MANEJO DE UN MAPA EN UN SURFACE DE FAMO.US ---------------
+
+
+              var mapdiv = document.createElement('div');
+
+              mapdiv.style.width = "100%";
+              //mapdiv.style.height = ''+ (window.innerHeight - 131) + 'px';
+              mapdiv.style.height = "100%";
+              
+              //mapdiv.style.height = "100%";
+              
+
+             // console.log(window.innerHeight - 131);
+             // mapdiv.style.height = ''+ (window.innerHeight - 131) + 'px';
+
+              var maptemplate  = Template.leafletmap; 
+              var mapdata = { content : 'Dummy Data'};
+
+              UI.insert(mapdata ? UI.renderWithData(maptemplate, mapdata) : UI.render(maptemplate), mapdiv);
+
+              Application._sectionSurfaces['leafletmap'] = new Surface({
+                content: mapdiv,
+                size: [undefined, undefined],
+                classes: ["famous-container", "leaflet-map-container"]
+              });
+
+              L.Icon.Default.imagePath = 'packages/leaflet/images';
+
+
+              var leafletMap = L.map(mapdiv, {
+                doubleClickZoom: true, attributionControl: false
+              }).setView([-2.1637515,-79.9623555], 12);
+
+              leafletMap._layersMaxZoom  = 18;
+              leafletMap._layersMinZoom  = 0;
+              
+
+              // City Airviews
+              // Guayaquil :  -2.1637515,-79.9623555,12z
+              // Quito : -0.1865944,-78.4305382,11z
+              // Cuenca : 40.0619721,-2.1480249,14z
+              // Loja : -4.0075952,-79.2083787,13z
+              // 
+
+              var dromosLight = L.tileLayer.provider('MapBox.davicho.hi14j103', {
+                attribution: '',  detectRetina: false, reuseTiles: true, maxNativeZoom: 19
+
+              }).addTo(leafletMap); //add para que salga como default
+
+              var dromosLargeFonts = L.tileLayer.provider('MapBox.davicho.i54nhca7', {
+                attribution: '',  detectRetina: false, reuseTiles: true, maxNativeZoom: 19
+              });
+
+
+
+              //todos los layers todos
+              var baseLayers = {
+                '<img src = "/images/isotipo.png" width="10px"/> Living City': dromosLight,
+                '<img src = "/images/isotipo.png" width="10px"/>  Myopic': L.tileLayer.provider('MapBox.davicho.i54nhca7', {attribution: ''}),
+                'OpenStreetMap': L.tileLayer.provider('OpenStreetMap.Mapnik', {attribution: ''}),
+                  //'B&W - OSM': L.tileLayer.provider('OpenStreetMap.BlackAndWhite'), 
+                  //'German - OSM': L.tileLayer.provider('OpenStreetMap.DE'),
+                  //'Hot Cake - OSM': L.tileLayer.provider('OpenStreetMap.HOT'),
+                'OpenCycleMap': L.tileLayer.provider('Thunderforest.OpenCycleMap', {attribution: ''}),
+                'OpenTransport': L.tileLayer.provider('Thunderforest.Transport', {attribution: ''}),
+                  //'Landscape': L.tileLayer.provider('Thunderforest.Landscape'),
+                  //'MapQuest Open': L.tileLayer.provider('MapQuestOpen.OSM'),
+                  //'Sattelite - MapQuest': L.tileLayer.provider('MapQuestOpen.Aerial'),
+                'Stamen Toner': L.tileLayer.provider('Stamen.Toner', {attribution: ''}),
+                'Stamen Watercolor': L.tileLayer.provider('Stamen.Watercolor', {attribution: ''}),
+                  //'Esri WorldStreetMap': L.tileLayer.provider('Esri.WorldStreetMap'),
+                  //'Esri DeLorme': L.tileLayer.provider('Esri.DeLorme'),
+                  //'Topography - Esri': L.tileLayer.provider('Esri.WorldTopoMap'),
+                'Esri World Imagery': L.tileLayer.provider('Esri.WorldImagery', {attribution: ''}),
+                  //'Esri WorldTerrain': L.tileLayer.provider('Esri.WorldTerrain'),
+                  //'Esri WorldShadedRelief': L.tileLayer.provider('Esri.WorldShadedRelief'),
+                  //'Esri WorldPhysical': L.tileLayer.provider('Esri.WorldPhysical'),
+                  //'Esri OceanBasemap': L.tileLayer.provider('Esri.OceanBasemap'),
+                  //'NatGeo - Esri': L.tileLayer.provider('Esri.NatGeoWorldMap'),
+                  //'Esri WorldGrayCanvas': L.tileLayer.provider('Esri.WorldGrayCanvas'),
+                  //'Acetate': L.tileLayer.provider('Acetate'),
+                  //'normal Nokia': L.tileLayer.provider('Nokia.normalDay'),
+                };
+
+                var overlayLayers = {
+                  //'OpenSeaMap': L.tileLayer.provider('OpenSeaMap'),
+                  //'OpenWeatherMap Clouds': L.tileLayer.provider('OpenWeatherMap.Clouds'),
+                  //'OpenWeatherMap CloudsClassic': L.tileLayer.provider('OpenWeatherMap.CloudsClassic'),
+                  //'Precipitation - OWM': L.tileLayer.provider('OpenWeatherMap.Precipitation'),
+                'OpenMapSurfer Bounds' : L.tileLayer.provider('OpenMapSurfer.AdminBounds', {attribution: '', }),
+                  //'Grayscale - OMS' : L.tileLayer.provider('OpenMapSurfer.Grayscale'),
+                  //'OpenWeatherMap PrecipitationClassic': L.tileLayer.provider('OpenWeatherMap.PrecipitationClassic'),
+                  //'OpenWeatherMap Rain': L.tileLayer.provider('OpenWeatherMap.Rain'),
+                  //'OpenWeatherMap RainClassic': L.tileLayer.provider('OpenWeatherMap.RainClassic'),
+                  //'OpenWeatherMap Pressure': L.tileLayer.provider('OpenWeatherMap.Pressure'),
+                  //'OpenWeatherMap PressureContour': L.tileLayer.provider('OpenWeatherMap.PressureContour'),
+                  //'OpenWeatherMap Wind': L.tileLayer.provider('OpenWeatherMap.Wind'),
+                  //'OpenWeatherMap Temperature': L.tileLayer.provider('OpenWeatherMap.Temperature'),
+                  //'OpenWeatherMap Snow': L.tileLayer.provider('OpenWeatherMap.Snow')
+                };
+
+  //              var layerControl = L.control.layers((baseLayers, overlayLayers, {collapsed: false}).addTo( this._sectionSurfaces[name].content ));
+                var layerControl = L.control.layers( baseLayers, overlayLayers, {collapsed: true} );
+                var layerScales  = L.control.scale({metric: true, position: 'bottomleft'}).addTo(leafletMap);
+                layerControl.addTo(leafletMap);
+                leafletMap._maxNativeZoom  = 18;
+                leafletMap._layersMaxZoom  = 18;
+                leafletMap._layersMinZoom  = 0;
+                leafletMap._continousWorld = true;
+
+               // leafletMap.locate({watch: true, setView: true, timeout: 20000});
+             
+
+                //leafletMap.invalidateSize(false);
+                L.Util.requestAnimFrame(leafletMap.invalidateSize,leafletMap,!1,leafletMap._container);; //para que todos los tiles carguen
+
+                var m = new Main();
+                m.init(leafletMap);
+
+                
+                setTimeout(function(){
+                  //console.log('redimensionando el mapa');
+                  leafletMap.invalidateSize(false);
+                }, 300);
+              
+   });
+

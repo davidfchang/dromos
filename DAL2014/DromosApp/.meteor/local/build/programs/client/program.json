@@ -1,0 +1,1570 @@
+{
+  "format": "browser-program-pre1",
+  "manifest": [
+    {
+      "path": "packages/underscore.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/underscore.js?0a80a8623e1b40b5df5a05582f288ddd586eaa18",
+      "sourceMap": "packages/underscore.js.map",
+      "sourceMapUrl": "/packages/0a80a8623e1b40b5df5a05582f288ddd586eaa18.map",
+      "size": 150753,
+      "hash": "d9555dfa7f93e1d1a9738f5ba5c9251eb7482209"
+    },
+    {
+      "path": "packages/meteor.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/meteor.js?148e9381d225ecad703f4b858769b636ff7a2537",
+      "sourceMap": "packages/meteor.js.map",
+      "sourceMapUrl": "/packages/148e9381d225ecad703f4b858769b636ff7a2537.map",
+      "size": 85093,
+      "hash": "fffd7c6aaf3472addff82f67c09fb3f327947e43"
+    },
+    {
+      "path": "packages/json.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/json.js?e22856eae714c681199eabc5c0710b904b125554",
+      "sourceMap": "packages/json.js.map",
+      "sourceMapUrl": "/packages/e22856eae714c681199eabc5c0710b904b125554.map",
+      "size": 58410,
+      "hash": "22336e2adfc7bd2e7de733d5779ed503dddcb1f9"
+    },
+    {
+      "path": "packages/ejson.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/ejson.js?dcf7f22218141278194ba57f79fa891d3f0b53b1",
+      "sourceMap": "packages/ejson.js.map",
+      "sourceMapUrl": "/packages/dcf7f22218141278194ba57f79fa891d3f0b53b1.map",
+      "size": 69627,
+      "hash": "82a55f378f265eeaa07b891187b3a4ea14eedbcf"
+    },
+    {
+      "path": "packages/logging.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/logging.js?0de00019cf57ae305903f15baf5dc8e10f973ded",
+      "sourceMap": "packages/logging.js.map",
+      "sourceMapUrl": "/packages/0de00019cf57ae305903f15baf5dc8e10f973ded.map",
+      "size": 27875,
+      "hash": "8698e3fe608428b2851eef33b82a69fd41037459"
+    },
+    {
+      "path": "packages/reload.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/reload.js?ad0e94b5b63bbe79ab30e9dad4e6eb91694f5875",
+      "sourceMap": "packages/reload.js.map",
+      "sourceMapUrl": "/packages/ad0e94b5b63bbe79ab30e9dad4e6eb91694f5875.map",
+      "size": 20095,
+      "hash": "209c92ea52e2c3f800364ed6d63ac763e91da413"
+    },
+    {
+      "path": "packages/deps.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/deps.js?91f1235baecd83915f7d3a7328526dbba41482be",
+      "sourceMap": "packages/deps.js.map",
+      "sourceMapUrl": "/packages/91f1235baecd83915f7d3a7328526dbba41482be.map",
+      "size": 37508,
+      "hash": "17962dd8fa6117199a97669724f7b78211c81ca1"
+    },
+    {
+      "path": "packages/random.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/random.js?fe7b46080c91ce482acf6fc326afbc5b176f0502",
+      "sourceMap": "packages/random.js.map",
+      "sourceMapUrl": "/packages/fe7b46080c91ce482acf6fc326afbc5b176f0502.map",
+      "size": 24166,
+      "hash": "d6e2261568ba2089ea3d862f51c6afa3a3b920d3"
+    },
+    {
+      "path": "packages/retry.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/retry.js?1f1dd2c35d300110fdaba51ce4473583bc3bf031",
+      "sourceMap": "packages/retry.js.map",
+      "sourceMapUrl": "/packages/1f1dd2c35d300110fdaba51ce4473583bc3bf031.map",
+      "size": 7312,
+      "hash": "20892ded5f347ee3d88affba1e14a92381d15292"
+    },
+    {
+      "path": "packages/check.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/check.js?a54cf3c7b3abe9208d064621eb80a3ecaf2f4add",
+      "sourceMap": "packages/check.js.map",
+      "sourceMapUrl": "/packages/a54cf3c7b3abe9208d064621eb80a3ecaf2f4add.map",
+      "size": 30962,
+      "hash": "74f3303415eeaa63fed122e5d8fb4fddde5e018a"
+    },
+    {
+      "path": "packages/id-map.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/id-map.js?9ea6eaae8d74693ce2505a858d9a5e60cf191298",
+      "sourceMap": "packages/id-map.js.map",
+      "sourceMapUrl": "/packages/9ea6eaae8d74693ce2505a858d9a5e60cf191298.map",
+      "size": 8651,
+      "hash": "7e267dd367fce7900e3d67da561edba51a8d4892"
+    },
+    {
+      "path": "packages/ordered-dict.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/ordered-dict.js?bf8af2f26c8d96bf8b2e6b407d3ed69f23c2cd37",
+      "sourceMap": "packages/ordered-dict.js.map",
+      "sourceMapUrl": "/packages/bf8af2f26c8d96bf8b2e6b407d3ed69f23c2cd37.map",
+      "size": 20462,
+      "hash": "04293cc374826c63c8f2eb11c7ac8134f661cf0b"
+    },
+    {
+      "path": "packages/geojson-utils.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/geojson-utils.js?81b79d5cf96d00b4b7a28987debcffb665c17526",
+      "sourceMap": "packages/geojson-utils.js.map",
+      "sourceMapUrl": "/packages/81b79d5cf96d00b4b7a28987debcffb665c17526.map",
+      "size": 48406,
+      "hash": "732d630d298f84b0b725df217a34d9b87fc984eb"
+    },
+    {
+      "path": "packages/minimongo.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/minimongo.js?4ee0ab879b747ffce53b84d2eb80d456d2dcca6d",
+      "sourceMap": "packages/minimongo.js.map",
+      "sourceMapUrl": "/packages/4ee0ab879b747ffce53b84d2eb80d456d2dcca6d.map",
+      "size": 424613,
+      "hash": "9b7dd91afd5d7807e8a3d754baf93d7d6aec71f3"
+    },
+    {
+      "path": "packages/livedata.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/livedata.js?502d55e7a7449f770e46330161cb7bd525c4417a",
+      "sourceMap": "packages/livedata.js.map",
+      "sourceMapUrl": "/packages/502d55e7a7449f770e46330161cb7bd525c4417a.map",
+      "size": 600902,
+      "hash": "d5bc1624d333a23b9bffc8ead6921e1efc064333"
+    },
+    {
+      "path": "packages/follower-livedata.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/follower-livedata.js?39b05f02878030ae806a16a173661b7df1e92eb6",
+      "sourceMap": "packages/follower-livedata.js.map",
+      "sourceMapUrl": "/packages/39b05f02878030ae806a16a173661b7df1e92eb6.map",
+      "size": 1562,
+      "hash": "86f15f1dfb79baeec5c8f16c55275b050a489ad1"
+    },
+    {
+      "path": "packages/application-configuration.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/application-configuration.js?fa92020e10c808f1287070d009f69a4054676e5a",
+      "sourceMap": "packages/application-configuration.js.map",
+      "sourceMapUrl": "/packages/fa92020e10c808f1287070d009f69a4054676e5a.map",
+      "size": 1557,
+      "hash": "f07593c89c711c06846048b168f5f96b86438f6d"
+    },
+    {
+      "path": "packages/mongo-livedata.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/mongo-livedata.js?26f4a1853dbf09c49d7cc49710b6fa14f83b138b",
+      "sourceMap": "packages/mongo-livedata.js.map",
+      "sourceMapUrl": "/packages/26f4a1853dbf09c49d7cc49710b6fa14f83b138b.map",
+      "size": 110074,
+      "hash": "f11108ea25807582e2d94a42af4fb0471d0f51be"
+    },
+    {
+      "path": "packages/autoupdate.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/autoupdate.js?85a69577c7e94226061fb2c886f23080a9163712",
+      "sourceMap": "packages/autoupdate.js.map",
+      "sourceMapUrl": "/packages/85a69577c7e94226061fb2c886f23080a9163712.map",
+      "size": 10153,
+      "hash": "723ab51f06c129b5224a075641dec1ed4c998bea"
+    },
+    {
+      "path": "packages/standard-app-packages.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/standard-app-packages.js?601dc02c741b437bbe8be03773a37f7d896a88e7",
+      "sourceMap": "packages/standard-app-packages.js.map",
+      "sourceMapUrl": "/packages/601dc02c741b437bbe8be03773a37f7d896a88e7.map",
+      "size": 1457,
+      "hash": "d1212ff69eb4558f928ef3dcd90c81ffd3fdfc78"
+    },
+    {
+      "path": "packages/autopublish.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/autopublish.js?c3059a78bb200b171099fc4fa1a9345101790ddb",
+      "sourceMap": "packages/autopublish.js.map",
+      "sourceMapUrl": "/packages/c3059a78bb200b171099fc4fa1a9345101790ddb.map",
+      "size": 1360,
+      "hash": "d28abcfbbfe6d943da97d84fe32501e321bff06e"
+    },
+    {
+      "path": "packages/localstorage.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/localstorage.js?5e0935b5400fc4b2fe50a44086afc939e63063dc",
+      "sourceMap": "packages/localstorage.js.map",
+      "sourceMapUrl": "/packages/5e0935b5400fc4b2fe50a44086afc939e63063dc.map",
+      "size": 6754,
+      "hash": "e40b49d57fdc9ba8eee3ced284fc194b36f60dd4"
+    },
+    {
+      "path": "packages/jquery.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/jquery.js?265926494aaa3929cd2e30da265211c5929f37a4",
+      "sourceMap": "packages/jquery.js.map",
+      "sourceMapUrl": "/packages/265926494aaa3929cd2e30da265211c5929f37a4.map",
+      "size": 1295474,
+      "hash": "3d88d8e02ae76ad0265d1a57f5d84b882613a7b1"
+    },
+    {
+      "path": "packages/observe-sequence.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/observe-sequence.js?2d685c5e1f0a3395de32e4cd78255cc082f7d1b5",
+      "sourceMap": "packages/observe-sequence.js.map",
+      "sourceMapUrl": "/packages/2d685c5e1f0a3395de32e4cd78255cc082f7d1b5.map",
+      "size": 31409,
+      "hash": "404249eec61195f3db4d16a2cc2e715e859d863f"
+    },
+    {
+      "path": "packages/htmljs.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/htmljs.js?629dd6defa8e763c63831df16e3b0c1ba4e9b470",
+      "sourceMap": "packages/htmljs.js.map",
+      "sourceMapUrl": "/packages/629dd6defa8e763c63831df16e3b0c1ba4e9b470.map",
+      "size": 59671,
+      "hash": "270cfa90ef36fd28b95a8d7529e1fbd4ffc522d1"
+    },
+    {
+      "path": "packages/ui.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/ui.js?f0696b7e9407b8f11e5838e7e7820e9b6d7fc92f",
+      "sourceMap": "packages/ui.js.map",
+      "sourceMapUrl": "/packages/f0696b7e9407b8f11e5838e7e7820e9b6d7fc92f.map",
+      "size": 314715,
+      "hash": "c772f15fd72614763c4c1a6d7f684f93af3bf369"
+    },
+    {
+      "path": "packages/accounts-base.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/accounts-base.js?7b90b1939a52b5c6ad91265df4dd167bd5f4ebdb",
+      "sourceMap": "packages/accounts-base.js.map",
+      "sourceMapUrl": "/packages/7b90b1939a52b5c6ad91265df4dd167bd5f4ebdb.map",
+      "size": 66372,
+      "hash": "92e2ae04b096a290f5e9d5b86bbe0cbe7f49bf1c"
+    },
+    {
+      "path": "packages/oauth.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/oauth.js?49ed9ff1848263ddd4df8bc11c7f8f107222f2f6",
+      "sourceMap": "packages/oauth.js.map",
+      "sourceMapUrl": "/packages/49ed9ff1848263ddd4df8bc11c7f8f107222f2f6.map",
+      "size": 11746,
+      "hash": "5fdfc1376bb85a4f6447272f3586737eec96bfcf"
+    },
+    {
+      "path": "packages/accounts-oauth.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/accounts-oauth.js?913349800214885078523e274e4b00fa105ad388",
+      "sourceMap": "packages/accounts-oauth.js.map",
+      "sourceMapUrl": "/packages/913349800214885078523e274e4b00fa105ad388.map",
+      "size": 7943,
+      "hash": "b25c42acca050e390b5925d90c39401cbbee9788"
+    },
+    {
+      "path": "packages/http.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/http.js?5858fc5e810b7135fc64f6c24e71564ab072c75e",
+      "sourceMap": "packages/http.js.map",
+      "sourceMapUrl": "/packages/5858fc5e810b7135fc64f6c24e71564ab072c75e.map",
+      "size": 26251,
+      "hash": "a8084014641e16f01233462371dd80c901b34f73"
+    },
+    {
+      "path": "packages/templating.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/templating.js?b36d51fd34724d5d501d8557cd9f846874d95aef",
+      "sourceMap": "packages/templating.js.map",
+      "sourceMapUrl": "/packages/b36d51fd34724d5d501d8557cd9f846874d95aef.map",
+      "size": 4252,
+      "hash": "dae2973329cd2ff5e094e7123f718974f635d1bc"
+    },
+    {
+      "path": "packages/service-configuration.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/service-configuration.js?c3ce094ff5f2ea7bb9376e0affb96ca42b6f50c1",
+      "sourceMap": "packages/service-configuration.js.map",
+      "sourceMapUrl": "/packages/c3ce094ff5f2ea7bb9376e0affb96ca42b6f50c1.map",
+      "size": 5116,
+      "hash": "dcfbbb6dca80fbae073711d88ee6a0ae870e2778"
+    },
+    {
+      "path": "packages/oauth1.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/oauth1.js?e16be7aa83611506e7ceebd6669c8937aa2e6006",
+      "sourceMap": "packages/oauth1.js.map",
+      "sourceMapUrl": "/packages/e16be7aa83611506e7ceebd6669c8937aa2e6006.map",
+      "size": 1539,
+      "hash": "25bd9b90beb6b2e8b332927eb9e60bc97f130add"
+    },
+    {
+      "path": "packages/twitter.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/twitter.js?682b9755a9cd57e39f5538532bd039f7e23b8182",
+      "sourceMap": "packages/twitter.js.map",
+      "sourceMapUrl": "/packages/682b9755a9cd57e39f5538532bd039f7e23b8182.map",
+      "size": 9888,
+      "hash": "d796db6336699e7b504c239f3dc2c2b6e8467dac"
+    },
+    {
+      "path": "packages/accounts-twitter.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/accounts-twitter.js?a1c5862c55c6bf951b845bee147062ac1d5fb3d4",
+      "sourceMap": "packages/accounts-twitter.js.map",
+      "sourceMapUrl": "/packages/a1c5862c55c6bf951b845bee147062ac1d5fb3d4.map",
+      "size": 4977,
+      "hash": "ecc3cd3524b92fcb45925fa6073b837f19f14a99"
+    },
+    {
+      "path": "packages/famono.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/famono.js?b612aae15ceb3167b387a0325f1ab50b01865bad",
+      "sourceMap": "packages/famono.js.map",
+      "sourceMapUrl": "/packages/b612aae15ceb3167b387a0325f1ab50b01865bad.map",
+      "size": 28420,
+      "hash": "a2f5f559e93ed7d61a8278560c7010dfaefb37c9"
+    },
+    {
+      "path": "packages/oauth2.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/oauth2.js?5fa58098b89a1467037a0b8eb4b17ad33b72cf07",
+      "sourceMap": "packages/oauth2.js.map",
+      "sourceMapUrl": "/packages/5fa58098b89a1467037a0b8eb4b17ad33b72cf07.map",
+      "size": 1503,
+      "hash": "c3f24cc9266091a2593c75054764551f2a783c62"
+    },
+    {
+      "path": "packages/foursquare.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/foursquare.js?18618c28fe92277fb25d61f881d0b5e417f87f9c",
+      "sourceMap": "packages/foursquare.js.map",
+      "sourceMapUrl": "/packages/18618c28fe92277fb25d61f881d0b5e417f87f9c.map",
+      "size": 9466,
+      "hash": "7ef91fbcb454fa622562ca0b3087b971a673997f"
+    },
+    {
+      "path": "packages/accounts-foursquare.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/accounts-foursquare.js?2210c233bdd0a2785b04548c314c51d566e3bad1",
+      "sourceMap": "packages/accounts-foursquare.js.map",
+      "sourceMapUrl": "/packages/2210c233bdd0a2785b04548c314c51d566e3bad1.map",
+      "size": 4414,
+      "hash": "fb5df6885e6f00994e79e8cb9f446f5aea85a8ce"
+    },
+    {
+      "path": "packages/reactive-dict.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/reactive-dict.js?22667928acc72f619ce81e7ac1e35def1ba9e0ae",
+      "sourceMap": "packages/reactive-dict.js.map",
+      "sourceMapUrl": "/packages/22667928acc72f619ce81e7ac1e35def1ba9e0ae.map",
+      "size": 13878,
+      "hash": "1f75a22be6345194702958fe901a366c93821b7e"
+    },
+    {
+      "path": "packages/session.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/session.js?5bcd2d86431dc10d5f4be0910cb6567342e1aaf6",
+      "sourceMap": "packages/session.js.map",
+      "sourceMapUrl": "/packages/5bcd2d86431dc10d5f4be0910cb6567342e1aaf6.map",
+      "size": 3314,
+      "hash": "b64e7cd4899d58d3ab10b1e5ba3a6c276d3696b7"
+    },
+    {
+      "path": "packages/srp.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/srp.js?cd2b00eb659881be03caa6d20696b094260b6151",
+      "sourceMap": "packages/srp.js.map",
+      "sourceMapUrl": "/packages/cd2b00eb659881be03caa6d20696b094260b6151.map",
+      "size": 211366,
+      "hash": "fe7c71cfea0586536a9c6ff8fcb2093daacf4f13"
+    },
+    {
+      "path": "packages/accounts-password.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/accounts-password.js?7f6e34b4d1163d4f00553d0c81660aa79dcf9b89",
+      "sourceMap": "packages/accounts-password.js.map",
+      "sourceMapUrl": "/packages/7f6e34b4d1163d4f00553d0c81660aa79dcf9b89.map",
+      "size": 17156,
+      "hash": "b7d5514a63d0edaedd36f9878505bee3ebf1de57"
+    },
+    {
+      "path": "packages/accounts-ui-unstyled.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/accounts-ui-unstyled.js?ad471c128f10d77553dbed2a2fd5b788e77b60e8",
+      "sourceMap": "packages/accounts-ui-unstyled.js.map",
+      "sourceMapUrl": "/packages/ad471c128f10d77553dbed2a2fd5b788e77b60e8.map",
+      "size": 233307,
+      "hash": "8f75490582a86cb6ae547e47aa4bc44dd735da06"
+    },
+    {
+      "path": "packages/github.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/github.js?daf400be891114b082c828c5ad8cc9de4bee931f",
+      "sourceMap": "packages/github.js.map",
+      "sourceMapUrl": "/packages/daf400be891114b082c828c5ad8cc9de4bee931f.map",
+      "size": 10534,
+      "hash": "21e29983cffb82b49dedc2de7d37998de10af397"
+    },
+    {
+      "path": "packages/accounts-github.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/accounts-github.js?cd8e0996c426b07b63ab8131432e3cbb1bf3f6b9",
+      "sourceMap": "packages/accounts-github.js.map",
+      "sourceMapUrl": "/packages/cd8e0996c426b07b63ab8131432e3cbb1bf3f6b9.map",
+      "size": 4725,
+      "hash": "bbdef76a5ea26cb82a8af400dbd7636e26fe3967"
+    },
+    {
+      "path": "packages/leaflet.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/leaflet.js?ad7b569067d1f68c7403ea1c89a172b4cfd68d85",
+      "sourceMap": "packages/leaflet.js.map",
+      "sourceMapUrl": "/packages/ad7b569067d1f68c7403ea1c89a172b4cfd68d85.map",
+      "size": 188625,
+      "hash": "cd9becc61a7ab44d7e66dbd8ea55a95a619a250b"
+    },
+    {
+      "path": "packages/facebook.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/facebook.js?93ccbb2e313ffa5ef3134ba2dff662f700df3ec5",
+      "sourceMap": "packages/facebook.js.map",
+      "sourceMapUrl": "/packages/93ccbb2e313ffa5ef3134ba2dff662f700df3ec5.map",
+      "size": 11221,
+      "hash": "a845ec77daaf8a5d30e85036610e0f926e24c6c0"
+    },
+    {
+      "path": "packages/accounts-facebook.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/accounts-facebook.js?9e890f917b8ec3c3ea39544407a7e982dbc6d5ae",
+      "sourceMap": "packages/accounts-facebook.js.map",
+      "sourceMapUrl": "/packages/9e890f917b8ec3c3ea39544407a7e982dbc6d5ae.map",
+      "size": 5169,
+      "hash": "f7089ca925fa851d324c2b9a3eff4eda66050536"
+    },
+    {
+      "path": "packages/iron-router.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/iron-router.js?2ba6a175ee3809d07717c93d3b60ad0583b9573e",
+      "sourceMap": "packages/iron-router.js.map",
+      "sourceMapUrl": "/packages/2ba6a175ee3809d07717c93d3b60ad0583b9573e.map",
+      "size": 233230,
+      "hash": "52fb72d532eb0f954da6c150e0a877a0ac63e023"
+    },
+    {
+      "path": "packages/modernizr-meteor.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/modernizr-meteor.js?17e6a36d2fde62f1714b96c04cc7531babb0690e",
+      "sourceMap": "packages/modernizr-meteor.js.map",
+      "sourceMapUrl": "/packages/17e6a36d2fde62f1714b96c04cc7531babb0690e.map",
+      "size": 20406,
+      "hash": "d010e4270c33a19915034a15c85408586d805344"
+    },
+    {
+      "path": "packages/webapp.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/webapp.js?e1be090051b82f046484dccc2de7d747e50c7328",
+      "sourceMap": "packages/webapp.js.map",
+      "sourceMapUrl": "/packages/e1be090051b82f046484dccc2de7d747e50c7328.map",
+      "size": 3173,
+      "hash": "67f90408f968dde9a39713ebfe55c209c99cbc02"
+    },
+    {
+      "path": "packages/spacebars.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/spacebars.js?f49560fc90a8d71b7637d9596696078881b8c812",
+      "sourceMap": "packages/spacebars.js.map",
+      "sourceMapUrl": "/packages/f49560fc90a8d71b7637d9596696078881b8c812.map",
+      "size": 30285,
+      "hash": "ef3b5255d03a0fba96486815e08cf26918ea5b70"
+    },
+    {
+      "path": "packages/global-imports.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/global-imports.js?3920c777db15bb4a74fcfe00f7490f360bf9b5f3",
+      "size": 877,
+      "hash": "3920c777db15bb4a74fcfe00f7490f360bf9b5f3"
+    },
+    {
+      "path": "app/client/template.main.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/client/template.main.js?224d068dd878605ff83b91d0f2209946fdc2d7ad",
+      "size": 11649,
+      "hash": "224d068dd878605ff83b91d0f2209946fdc2d7ad"
+    },
+    {
+      "path": "app/lib/famous-polyfills/classList.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous-polyfills/classList.js?80457f98b0ff1bc039f114ca61018e8ecd96232f",
+      "size": 3997,
+      "hash": "80457f98b0ff1bc039f114ca61018e8ecd96232f"
+    },
+    {
+      "path": "app/lib/famous-polyfills/functionPrototypeBind.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous-polyfills/functionPrototypeBind.js?02f0c382bdc671dce746b79623be7c9998962ba4",
+      "size": 875,
+      "hash": "02f0c382bdc671dce746b79623be7c9998962ba4"
+    },
+    {
+      "path": "app/lib/famous-polyfills/requestAnimationFrame.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous-polyfills/requestAnimationFrame.js?4a1755f464c45f0bbe93ae583a78c2a746e38d70",
+      "size": 566,
+      "hash": "4a1755f464c45f0bbe93ae583a78c2a746e38d70"
+    },
+    {
+      "path": "app/lib/famous-polyfills/index.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous-polyfills/index.js?429a60c5bc1e9ac545e363a1657d341b73538839",
+      "size": 329,
+      "hash": "429a60c5bc1e9ac545e363a1657d341b73538839"
+    },
+    {
+      "path": "app/lib/famous/core/famous.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/famous.js?22ae538796c0295fbb56482979a998cf8ce91537",
+      "size": 49,
+      "hash": "22ae538796c0295fbb56482979a998cf8ce91537"
+    },
+    {
+      "path": "app/lib/famous/core/Entity.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/Entity.js?b38c264d6a992aa12acd77d851b15f677aa1f9a1",
+      "size": 1724,
+      "hash": "b38c264d6a992aa12acd77d851b15f677aa1f9a1"
+    },
+    {
+      "path": "app/lib/famous/core/Transform.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/Transform.js?1086d0bc30f0b3fb77b7226020d52c45c8badded",
+      "size": 23971,
+      "hash": "1086d0bc30f0b3fb77b7226020d52c45c8badded"
+    },
+    {
+      "path": "app/lib/famous/core/SpecParser.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/SpecParser.js?43c524377e5778f8f6da980d97d1d413fe84bcd7",
+      "size": 5716,
+      "hash": "43c524377e5778f8f6da980d97d1d413fe84bcd7"
+    },
+    {
+      "path": "app/lib/famous/core/RenderNode.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/RenderNode.js?2b1e8e93d81b94ad1c72c57b0b595dff55f85c6f",
+      "size": 5622,
+      "hash": "2b1e8e93d81b94ad1c72c57b0b595dff55f85c6f"
+    },
+    {
+      "path": "app/lib/famous/core/EventEmitter.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/EventEmitter.js?4deb62e5683698b4a2f230e91a9e1397cb7921e8",
+      "size": 2718,
+      "hash": "4deb62e5683698b4a2f230e91a9e1397cb7921e8"
+    },
+    {
+      "path": "app/lib/famous/core/EventHandler.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/EventHandler.js?dc93bbf56b83db68b84db225fefa019efa873595",
+      "size": 7046,
+      "hash": "dc93bbf56b83db68b84db225fefa019efa873595"
+    },
+    {
+      "path": "app/lib/famous/core/ElementAllocator.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/ElementAllocator.js?ba40bec9e1087de0910fe22918db80274d97f686",
+      "size": 3189,
+      "hash": "ba40bec9e1087de0910fe22918db80274d97f686"
+    },
+    {
+      "path": "app/lib/famous/utilities/Utility.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/utilities/Utility.js?a35d4c80fc2544eae4abb8d4b805d167faa654e7",
+      "size": 2680,
+      "hash": "a35d4c80fc2544eae4abb8d4b805d167faa654e7"
+    },
+    {
+      "path": "app/lib/famous/transitions/MultipleTransition.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/transitions/MultipleTransition.js?78a29463f517e3c3adb98299ef7b605e0a4d97c2",
+      "size": 2504,
+      "hash": "78a29463f517e3c3adb98299ef7b605e0a4d97c2"
+    },
+    {
+      "path": "app/lib/famous/transitions/TweenTransition.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/transitions/TweenTransition.js?f9654544691a21d7f062b6715dce01fca0397632",
+      "size": 13872,
+      "hash": "f9654544691a21d7f062b6715dce01fca0397632"
+    },
+    {
+      "path": "app/lib/famous/transitions/Transitionable.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/transitions/Transitionable.js?f66f175f3e8e6852f03d4844a3cf114ae19a6dc0",
+      "size": 7253,
+      "hash": "f66f175f3e8e6852f03d4844a3cf114ae19a6dc0"
+    },
+    {
+      "path": "app/lib/famous/core/Context.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/Context.js?34c4de32e503ff7beb8c93759c3074150459f695",
+      "size": 7464,
+      "hash": "34c4de32e503ff7beb8c93759c3074150459f695"
+    },
+    {
+      "path": "app/lib/famous/core/OptionsManager.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/OptionsManager.js?e69f173838ca5f0227af4211a649d34b17dfcf6a",
+      "size": 6580,
+      "hash": "e69f173838ca5f0227af4211a649d34b17dfcf6a"
+    },
+    {
+      "path": "app/lib/famous/core/Engine.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/Engine.js?1cf5f399d9b16e6dda139f1e2922eaccbbb46b8d",
+      "size": 10288,
+      "hash": "1cf5f399d9b16e6dda139f1e2922eaccbbb46b8d"
+    },
+    {
+      "path": "app/lib/famous/transitions/TransitionableTransform.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/transitions/TransitionableTransform.js?b50d5482dc68f72472d1876be026363548cf2e9b",
+      "size": 7252,
+      "hash": "b50d5482dc68f72472d1876be026363548cf2e9b"
+    },
+    {
+      "path": "app/lib/famous/core/Modifier.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/Modifier.js?30141cf97695ab35cbc64e6b27f6a2d4724d8e3e",
+      "size": 12033,
+      "hash": "30141cf97695ab35cbc64e6b27f6a2d4724d8e3e"
+    },
+    {
+      "path": "app/lib/famous/core/View.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/View.js?378ff7fb7d1969930b40f854d5990a562d706ba7",
+      "size": 3248,
+      "hash": "378ff7fb7d1969930b40f854d5990a562d706ba7"
+    },
+    {
+      "path": "app/lib/famous/views/RenderController.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/views/RenderController.js?feadab06233719817a6e48f26d159ac9086acdbc",
+      "size": 13059,
+      "hash": "feadab06233719817a6e48f26d159ac9086acdbc"
+    },
+    {
+      "path": "app/lib/famous/transitions/Easing.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/transitions/Easing.js?b6779a68989c57af18c55d009affe30b212e959e",
+      "size": 7132,
+      "hash": "b6779a68989c57af18c55d009affe30b212e959e"
+    },
+    {
+      "path": "app/lib/famous/utilities/Timer.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/utilities/Timer.js?7799f224e81bbd7738117670271e7d32c7f91a60",
+      "size": 6144,
+      "hash": "7799f224e81bbd7738117670271e7d32c7f91a60"
+    },
+    {
+      "path": "app/lib/famous/physics/PhysicsEngine.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/physics/PhysicsEngine.js?e64b6e5169183bde584ad24c32fbaa2b4ca5c2a1",
+      "size": 14609,
+      "hash": "e64b6e5169183bde584ad24c32fbaa2b4ca5c2a1"
+    },
+    {
+      "path": "app/lib/famous/math/Vector.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/math/Vector.js?f9076a164ded15206511ddf9e0fe4391ab114362",
+      "size": 10561,
+      "hash": "f9076a164ded15206511ddf9e0fe4391ab114362"
+    },
+    {
+      "path": "app/lib/famous/physics/integrators/SymplecticEuler.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/physics/integrators/SymplecticEuler.js?8f01a9ba771c3e82d7a5c8f22613dc8e4c5d7571",
+      "size": 4521,
+      "hash": "8f01a9ba771c3e82d7a5c8f22613dc8e4c5d7571"
+    },
+    {
+      "path": "app/lib/famous/physics/bodies/Particle.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/physics/bodies/Particle.js?0b12b42aa93a634e8322c4ac61b57a4554bfb3a9",
+      "size": 11597,
+      "hash": "0b12b42aa93a634e8322c4ac61b57a4554bfb3a9"
+    },
+    {
+      "path": "app/lib/famous/physics/forces/Force.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/physics/forces/Force.js?2e4c2589cbc97626dd67a657facd854fcb24043d",
+      "size": 2618,
+      "hash": "2e4c2589cbc97626dd67a657facd854fcb24043d"
+    },
+    {
+      "path": "app/lib/famous/physics/forces/Drag.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/physics/forces/Drag.js?d08f7620cc2fa11e7dea89521b3ab09ecaa9c79a",
+      "size": 3193,
+      "hash": "d08f7620cc2fa11e7dea89521b3ab09ecaa9c79a"
+    },
+    {
+      "path": "app/lib/famous/physics/forces/Spring.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/physics/forces/Spring.js?b266ed31b8b49028c8ab2f6fec578c22a4805c79",
+      "size": 8048,
+      "hash": "b266ed31b8b49028c8ab2f6fec578c22a4805c79"
+    },
+    {
+      "path": "app/lib/famous/inputs/TouchTracker.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/inputs/TouchTracker.js?b8671fad268ff115d2ff8e080785b0e2f891f3fc",
+      "size": 3881,
+      "hash": "b8671fad268ff115d2ff8e080785b0e2f891f3fc"
+    },
+    {
+      "path": "app/lib/famous/inputs/TouchSync.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/inputs/TouchSync.js?db3de8b370dfea998aff0e2cf922b22e4291a20a",
+      "size": 7451,
+      "hash": "db3de8b370dfea998aff0e2cf922b22e4291a20a"
+    },
+    {
+      "path": "app/lib/famous/inputs/ScrollSync.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/inputs/ScrollSync.js?d1b6faf75a4bb8c185be886e8d27c4acc349fc2f",
+      "size": 7479,
+      "hash": "d1b6faf75a4bb8c185be886e8d27c4acc349fc2f"
+    },
+    {
+      "path": "app/lib/famous/inputs/GenericSync.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/inputs/GenericSync.js?52f8d0eedb47e79751eef9233dfb5c4046449640",
+      "size": 4187,
+      "hash": "52f8d0eedb47e79751eef9233dfb5c4046449640"
+    },
+    {
+      "path": "app/lib/famous/core/ViewSequence.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/ViewSequence.js?7ac74144c9cf94cb0aa9e7b984b65da94a1dc27e",
+      "size": 10103,
+      "hash": "7ac74144c9cf94cb0aa9e7b984b65da94a1dc27e"
+    },
+    {
+      "path": "app/lib/famous/core/Surface.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/Surface.js?992ba438f1507132357218f02976961a0075aaeb",
+      "size": 19924,
+      "hash": "992ba438f1507132357218f02976961a0075aaeb"
+    },
+    {
+      "path": "app/lib/famous/core/Group.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/core/Group.js?14b64ff7701429cdd32f33b87d30bd4732517bd6",
+      "size": 4049,
+      "hash": "14b64ff7701429cdd32f33b87d30bd4732517bd6"
+    },
+    {
+      "path": "app/lib/famous/views/Scroller.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/views/Scroller.js?f209bce60a801dae1783d62cea7aac84ff00404e",
+      "size": 12049,
+      "hash": "f209bce60a801dae1783d62cea7aac84ff00404e"
+    },
+    {
+      "path": "app/lib/famous/views/Scrollview.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/views/Scrollview.js?3fcaebe766ac70986c57c7a8119c0533d58d4b30",
+      "size": 19053,
+      "hash": "3fcaebe766ac70986c57c7a8119c0533d58d4b30"
+    },
+    {
+      "path": "app/lib/famous/physics/constraints/Constraint.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/physics/constraints/Constraint.js?58b3203e613a3c1783a9c521efd223d8b0b792ed",
+      "size": 2615,
+      "hash": "58b3203e613a3c1783a9c521efd223d8b0b792ed"
+    },
+    {
+      "path": "app/lib/famous/physics/constraints/Snap.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/physics/constraints/Snap.js?8e2e67ad72d250446b270d2aa70e9dfc73a74465",
+      "size": 7004,
+      "hash": "8e2e67ad72d250446b270d2aa70e9dfc73a74465"
+    },
+    {
+      "path": "app/lib/famous/transitions/SnapTransition.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/transitions/SnapTransition.js?caf5ddffdf2542e8ec2c8c64802e69c46ab5fb0b",
+      "size": 7431,
+      "hash": "caf5ddffdf2542e8ec2c8c64802e69c46ab5fb0b"
+    },
+    {
+      "path": "app/lib/famous/transitions/SpringTransition.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/transitions/SpringTransition.js?ad560ba8b056e6e0c8328cb9f6e29d540f04fa7d",
+      "size": 7876,
+      "hash": "ad560ba8b056e6e0c8328cb9f6e29d540f04fa7d"
+    },
+    {
+      "path": "app/lib/famous/modifiers/StateModifier.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/modifiers/StateModifier.js?852578d035be50345707b0587457f799bfc25600",
+      "size": 7864,
+      "hash": "852578d035be50345707b0587457f799bfc25600"
+    },
+    {
+      "path": "app/lib/famous/views/Lightbox.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/views/Lightbox.js?d6267218819057efeeed8fc757ec94dbc121ac49",
+      "size": 7868,
+      "hash": "d6267218819057efeeed8fc757ec94dbc121ac49"
+    },
+    {
+      "path": "app/lib/famous/views/HeaderFooterLayout.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/views/HeaderFooterLayout.js?881316f5efc626598ca62ad02e18ae17f10efbdf",
+      "size": 5841,
+      "hash": "881316f5efc626598ca62ad02e18ae17f10efbdf"
+    },
+    {
+      "path": "app/lib/famous/views/GridLayout.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/lib/famous/views/GridLayout.js?77e67776b140bd3a521773b5e5fc5cec57beab3f",
+      "size": 7636,
+      "hash": "77e67776b140bd3a521773b5e5fc5cec57beab3f"
+    },
+    {
+      "path": "app/client/js/jquery.autocomplete.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/client/js/jquery.autocomplete.js?84a33411a6b5728376dbc7e738e9314f5b394e77",
+      "size": 26863,
+      "hash": "84a33411a6b5728376dbc7e738e9314f5b394e77"
+    },
+    {
+      "path": "app/client/DromosFamous.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/client/DromosFamous.js?9fa6bfed96205f680531386d46702c0b77c87274",
+      "size": 7028,
+      "hash": "9fa6bfed96205f680531386d46702c0b77c87274"
+    },
+    {
+      "path": "app/client/JOSEmain.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/client/JOSEmain.js?5af0d101376583b43e53006fc56490ac7a13cbc8",
+      "size": 1518,
+      "hash": "5af0d101376583b43e53006fc56490ac7a13cbc8"
+    },
+    {
+      "path": "app/client/dromos-api.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/client/dromos-api.js?cb11d9f39492c05588c9b54db3ec8cfe2e0dac5a",
+      "size": 1516,
+      "hash": "cb11d9f39492c05588c9b54db3ec8cfe2e0dac5a"
+    },
+    {
+      "path": "app/client/map.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/client/map.js?180d53b0c047694c99dfa684fd6dae675c7460f9",
+      "size": 3967,
+      "hash": "180d53b0c047694c99dfa684fd6dae675c7460f9"
+    },
+    {
+      "path": "app/client/navigationMenu.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/client/navigationMenu.js?2a3453bba5b8f7e5a39caf4f0fb6016f1b588104",
+      "size": 19,
+      "hash": "2a3453bba5b8f7e5a39caf4f0fb6016f1b588104"
+    },
+    {
+      "path": "app/client/main.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/client/main.js?c3d59a6665ba99de2864c03821c2ff91dff37754",
+      "size": 11017,
+      "hash": "c3d59a6665ba99de2864c03821c2ff91dff37754"
+    },
+    {
+      "path": "packages/blaze-layout.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/blaze-layout.js?592b260d8b0a77c3e0726efb1b17ffc49ff49115",
+      "sourceMap": "packages/blaze-layout.js.map",
+      "sourceMapUrl": "/packages/592b260d8b0a77c3e0726efb1b17ffc49ff49115.map",
+      "size": 63158,
+      "hash": "db2aa5448a21a710065252aeda9c264301d6bba9"
+    },
+    {
+      "path": "2f32a8dadd4877d7c14e12c814ac6ff636d34ebb.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/2f32a8dadd4877d7c14e12c814ac6ff636d34ebb.css",
+      "sourceMap": "2f32a8dadd4877d7c14e12c814ac6ff636d34ebb.css.map",
+      "sourceMapUrl": "/2f32a8dadd4877d7c14e12c814ac6ff636d34ebb.map",
+      "size": 327543,
+      "hash": "3c7d97b432a20bdd60f268df3fb5c69a04117789"
+    },
+    {
+      "path": "packages/leaflet/images/layers-2x.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/leaflet/images/layers-2x.png",
+      "size": 2898,
+      "hash": "34239130c3aea22f21455746284d5a266435fa39"
+    },
+    {
+      "path": "packages/leaflet/images/layers.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/leaflet/images/layers.png",
+      "size": 1502,
+      "hash": "0dbc42bf6f9b7166196dd88bdbb45a11307ec8a5"
+    },
+    {
+      "path": "packages/leaflet/images/marker-icon-2x.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/leaflet/images/marker-icon-2x.png",
+      "size": 4033,
+      "hash": "77a97a1552a99795fb7ebcf9117cbe7fa653eb8a"
+    },
+    {
+      "path": "packages/leaflet/images/marker-icon.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/leaflet/images/marker-icon.png",
+      "size": 1747,
+      "hash": "70f05611305f77658e8f1a9827e5ddbdf97462b6"
+    },
+    {
+      "path": "packages/leaflet/images/marker-shadow.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/leaflet/images/marker-shadow.png",
+      "size": 797,
+      "hash": "1edd41cfd08b19f0ea18a1fc3f603b7bb9bb2b95"
+    },
+    {
+      "path": "app/fonts/fontello-cheatsheet.html",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/fontello-cheatsheet.html",
+      "size": 41834,
+      "hash": "4aa32fc6025e26bb8000927a532f95f00f6ce4eb"
+    },
+    {
+      "path": "app/fonts/icomoon.dev.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/icomoon.dev.svg",
+      "size": 5516,
+      "hash": "6e415397affd1848db516d348b202f86a389eece"
+    },
+    {
+      "path": "app/fonts/icomoon.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/icomoon.eot",
+      "size": 2504,
+      "hash": "a3d7bd67a45fb63532ccc2c6e1f87b4e14129ffc"
+    },
+    {
+      "path": "app/fonts/icomoon.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/icomoon.svg",
+      "size": 5392,
+      "hash": "e73c3db95e2c4f1f798c2fbd2cadbf8f5fc3d5aa"
+    },
+    {
+      "path": "app/fonts/icomoon.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/icomoon.ttf",
+      "size": 2340,
+      "hash": "13b8331447717abb7d159cec604a79cbd9005618"
+    },
+    {
+      "path": "app/fonts/icomoon.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/icomoon.woff",
+      "size": 2812,
+      "hash": "e57058f16e0e2be1bf6219a4c126df0a18f93ec6"
+    },
+    {
+      "path": "app/images/aprende.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/aprende.png",
+      "size": 19423,
+      "hash": "873a2dfd111a3b46491343ffa42980408317163f"
+    },
+    {
+      "path": "app/images/conoce.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/conoce.png",
+      "size": 17776,
+      "hash": "c44055c710534852856b462419ce25363b84e580"
+    },
+    {
+      "path": "app/images/descubre.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/descubre.png",
+      "size": 25356,
+      "hash": "d80e169a558708ab645f14ae19e8f12934bb93a6"
+    },
+    {
+      "path": "app/images/explora.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/explora.png",
+      "size": 19593,
+      "hash": "9886f935fbd40e18521f626dfd8031075ac10ae0"
+    },
+    {
+      "path": "app/images/favicon.ico",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/favicon.ico",
+      "size": 1150,
+      "hash": "955efff641afde793fb5da7784e1ccffc47a8c26"
+    },
+    {
+      "path": "app/images/gye_bridge.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/gye_bridge.jpg",
+      "size": 358243,
+      "hash": "0a213258e03ca4c100bfaf96d60acd36d3d17622"
+    },
+    {
+      "path": "app/images/gye_statue.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/gye_statue.jpg",
+      "size": 544980,
+      "hash": "6e659457bea9f6e583db2890bb216bd938181ee7"
+    },
+    {
+      "path": "app/images/gye_sunset.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/gye_sunset.jpg",
+      "size": 280933,
+      "hash": "2a4ce2884944ec31623431e16727c31827411176"
+    },
+    {
+      "path": "app/images/gye_traffic.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/gye_traffic.jpg",
+      "size": 223460,
+      "hash": "1edead8eaaf519260d2fb35aaf02b673fbd9d63f"
+    },
+    {
+      "path": "app/images/isotipo.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/isotipo.png",
+      "size": 12101,
+      "hash": "fb110157aa070fc6b3d8fa93ad820d8638cbe916"
+    },
+    {
+      "path": "app/images/layers-2x.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/layers-2x.png",
+      "size": 2898,
+      "hash": "34239130c3aea22f21455746284d5a266435fa39"
+    },
+    {
+      "path": "app/images/layers.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/layers.png",
+      "size": 1502,
+      "hash": "0dbc42bf6f9b7166196dd88bdbb45a11307ec8a5"
+    },
+    {
+      "path": "app/images/marker-icon-2x.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/marker-icon-2x.png",
+      "size": 4033,
+      "hash": "77a97a1552a99795fb7ebcf9117cbe7fa653eb8a"
+    },
+    {
+      "path": "app/images/marker-icon.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/marker-icon.png",
+      "size": 1747,
+      "hash": "70f05611305f77658e8f1a9827e5ddbdf97462b6"
+    },
+    {
+      "path": "app/images/marker-shadow.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/marker-shadow.png",
+      "size": 797,
+      "hash": "1edd41cfd08b19f0ea18a1fc3f603b7bb9bb2b95"
+    },
+    {
+      "path": "app/fonts/codropsicons/codropsicons.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/codropsicons/codropsicons.eot",
+      "size": 2244,
+      "hash": "d3bd1eb3823f094524ddf6070c154ccab81e6951"
+    },
+    {
+      "path": "app/fonts/codropsicons/codropsicons.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/codropsicons/codropsicons.svg",
+      "size": 3612,
+      "hash": "0de9f0aaf1cdf27ef9931d45c5eab3374c7142f4"
+    },
+    {
+      "path": "app/fonts/codropsicons/codropsicons.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/codropsicons/codropsicons.ttf",
+      "size": 2060,
+      "hash": "e670d3deb662651d71461be5a41add4a48b8998a"
+    },
+    {
+      "path": "app/fonts/codropsicons/codropsicons.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/codropsicons/codropsicons.woff",
+      "size": 2072,
+      "hash": "7c0ba611c947ddb5a82fa47a87a1ce63ed8bcd7f"
+    },
+    {
+      "path": "app/fonts/codropsicons/license.txt",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/codropsicons/license.txt",
+      "size": 279,
+      "hash": "d3d34d2a512acf27557ea82ac82a51058df43091"
+    },
+    {
+      "path": "app/fonts/fontello/fontello.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/fontello/fontello.eot",
+      "size": 85608,
+      "hash": "60989a4b14eb5f36e7f8d53a86f68fd9758f944a"
+    },
+    {
+      "path": "app/fonts/fontello/fontello.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/fontello/fontello.svg",
+      "size": 114670,
+      "hash": "2ef510704840b6664bfdddf1f45db34bc52bc396"
+    },
+    {
+      "path": "app/fonts/fontello/fontello.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/fontello/fontello.ttf",
+      "size": 85440,
+      "hash": "a5d980f6c6e0852a07ae119efec27362155c989a"
+    },
+    {
+      "path": "app/fonts/fontello/fontello.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/fontello/fontello.woff",
+      "size": 47892,
+      "hash": "73b7b068b3f1d836ab577acb75bdfc6084582a42"
+    },
+    {
+      "path": "app/images/logosDAL/BUNDURULOGO.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/BUNDURULOGO.png",
+      "size": 11341,
+      "hash": "ef7d5318effc7812a993d70feba63d80a9fc137d"
+    },
+    {
+      "path": "app/images/logosDAL/Dromos-Isotipo.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/Dromos-Isotipo.png",
+      "size": 12051,
+      "hash": "ca1bcb88843cf33480b2e9adf34017001c2622e9"
+    },
+    {
+      "path": "app/images/logosDAL/LOGO-DAL2012-sobre-blanco.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/LOGO-DAL2012-sobre-blanco.png",
+      "size": 18359,
+      "hash": "a5876c8af8944901c8e86bd366e3a34aece96d0b"
+    },
+    {
+      "path": "app/images/logosDAL/Layers-Dromos.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/Layers-Dromos.png",
+      "size": 48030,
+      "hash": "d6f14fc5e7a8e1adc8058099f0666b6db15db813"
+    },
+    {
+      "path": "app/images/logosDAL/bu-logo-medium.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/bu-logo-medium.png",
+      "size": 8139,
+      "hash": "8f97dffe656fc2930e8191e77adb08054dbca789"
+    },
+    {
+      "path": "app/images/logosDAL/disneylogoprintingray.com.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/disneylogoprintingray.com.png",
+      "size": 10908,
+      "hash": "efa6929024f5cfa2c7f12bc7fe94bfa0660b8be3"
+    },
+    {
+      "path": "app/images/logosDAL/guayaquil_1_1.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/guayaquil_1_1.jpg",
+      "size": 16774,
+      "hash": "ee5c9b9bc5ea8b09d03d1aff759afe047d62eace"
+    },
+    {
+      "path": "app/images/logosDAL/icon-256.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/icon-256.png",
+      "size": 28659,
+      "hash": "f76d45a4612e6fa526bef2b8cb4af74e25a5a5f3"
+    },
+    {
+      "path": "app/images/logosDAL/large-black-city-skyline.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/large-black-city-skyline.svg",
+      "size": 35841,
+      "hash": "af5f3fa7277d91298f4f9d87c088213f2906c28e"
+    },
+    {
+      "path": "app/images/logosDAL/logofundapi.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/logofundapi.jpg",
+      "size": 14206,
+      "hash": "17d8b42b08fc75a4aeadb869cc08e407a06df914"
+    },
+    {
+      "path": "app/images/logosDAL/logosocialabpantalla.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/logosocialabpantalla.jpg",
+      "size": 141113,
+      "hash": "7e1393fde49a77f44d44a4ff3119acf85e4e7375"
+    },
+    {
+      "path": "app/images/logosDAL/panel_nuevo_logo.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/panel_nuevo_logo.jpg",
+      "size": 60746,
+      "hash": "d3acfe375e2702f3445704b7077e0915ec3176ce"
+    },
+    {
+      "path": "app/images/logosDAL/programmer.psd",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logosDAL/programmer.psd",
+      "size": 184668,
+      "hash": "6e0ce0929ee5db9f26423e1b58e99dba56344503"
+    },
+    {
+      "path": "head.html",
+      "where": "internal",
+      "type": "head",
+      "hash": "3702a65e0579c0fdef88f0fe87e124a8b34ec6bb"
+    }
+  ]
+}
